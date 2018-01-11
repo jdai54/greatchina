@@ -10,7 +10,7 @@ RSpec.describe Item, type: :model do
 
   describe "attributes" do
     it "has a title, description, price, category, and user attributes" do
-      expect(item).to have_attributes(title: "Orange Chicken", description: "Chicken lightly battered and fried and coated in a sweet spicy sauce", category: "Poultry", user: user, price: 9.95)
+      expect(item).to have_attributes(title: "Orange Chicken", description: "Dark meat chicken lightly battered and fried and coated in a sweet spicy sauce", category: "Poultry", user: user, price: 9.95)
     end
   end
 end
