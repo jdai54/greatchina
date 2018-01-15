@@ -13,5 +13,14 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#map {
+  height: 400px;
+  width: 50%;
+}
+
+#home-image {
+  
+}
