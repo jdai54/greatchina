@@ -16,11 +16,43 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+
+body {
+  background-color: goldenrod;
+}
+
+.nav {
+  padding-right: 15px;
+  background-color: #ce0000;
+  border: none;
+  color: white;
+  width: 100%;
+}
+
+.nav a {
+  color: white;
+  font-size: 18px;
+}
+
 #map {
   height: 400px;
   width: 50%;
 }
 
-#home-image {
-  
+#about-image {
+
+}
+
+.about-desc {
+  text-align: left;
+  padding-top: 15px;
 }
