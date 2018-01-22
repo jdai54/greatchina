@@ -1,0 +1,56 @@
+
+  <%= form_for(@reservation) do |f| %>
+    <% if @reservation.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+        <ul>
+        <% @reservation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="field">
+      <input type='text' class='datetimepicker' name='reservation[arrival]' />
+    </div>
+    <div class="field">
+      <%= f.label :party_size %><br>
+      <%= f.number_field :party_size %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+
+  <script>
+    $('.datetimepicker').datetimepicker({
+      format: 'd.m.Y',
+      // minTime:'11:00',
+      // maxTime:'18:00',
+      formatTime: 'g:i a',
+      inline:true,
+      step:30,
+      // allowTimes:[
+      //   '11:00',
+      //   '11:30',
+      //   '12:00',
+      //   '12:30',
+      //   '1'
+      // ],
+    });
+  </script>
