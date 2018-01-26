@@ -1,2 +1,14 @@
-<h1>Menus#show</h1>
-<p>Find me in app/views/menus/show.html.erb</p>
+<h1>Menu</h1>
+<div class="row">
+  <div class="col-md-8">
+    <% @items.each do |item| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="item-list">
+            <%= item.title%>
+          </h4>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

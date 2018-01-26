@@ -17,7 +17,7 @@
 
 <p>
   <strong>Arrival:</strong>
-  <%= @reservation.arrival %>
+  <%= @reservation.arrival.strftime("%F - at %I:%M%p") %>
 </p>
 
 <p>
@@ -25,5 +25,4 @@
   <%= @reservation.party_size %>
 </p>
 
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> 
