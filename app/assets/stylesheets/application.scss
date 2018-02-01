@@ -28,6 +28,10 @@
   text-align: center;
 }
 
+h1 {
+  font-family: 'Tangerine', cursive;
+}
+
 
 body {
   background-image: image-url('dragon.jpeg');
@@ -78,12 +82,16 @@ body {
 
 .menu-category-big {
   text-align: center;
+  font-family: 'Tangerine', cursive;
+  font-weight: bold;
+  font-size: 2.0em;
 }
 
 .item-entry {
   display: flex;
   justify-content: space-between;
   font-size: 1.2em;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 
 // .item-price {
