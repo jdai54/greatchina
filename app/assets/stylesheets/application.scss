@@ -20,6 +20,8 @@
 .container {
   margin: 0 auto;
   text-align: center;
+  color: #fff;
+  font-size: 1.2em;
 }
 
 .jumbotron {
@@ -28,15 +30,18 @@
 
 
 body {
-  background-color: goldenrod;
+  background-image: image-url('dragon.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
 .nav {
   padding-top: 10px;
   padding-right: 40px;
-  background-color: #ce0000;
+  background-color: #780001;
   border: none;
-  color: white;
+  color: #fff;
   width: 100%;
 }
 
@@ -45,9 +50,17 @@ body {
   font-size: 18px;
 }
 
+.contact-info {
+  background-color: #262626;
+}
+
+.hours {
+}
+
 #map {
-  height: 400px;
-  width: 50%;
+  height: 300px;
+  width: 100%;
+  position: absolute;
 }
 
 #about-image {
@@ -58,3 +71,21 @@ body {
   text-align: left;
   padding-top: 15px;
 }
+
+.menu-display {
+  color: white;
+}
+
+.menu-category-big {
+  text-align: center;
+}
+
+.item-entry {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2em;
+}
+
+// .item-price {
+//   text-align: right;
+// }
