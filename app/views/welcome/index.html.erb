@@ -1,24 +1,26 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1>Welcome to Great China!</h1>
-    <div id="home-image">
-      <%= image_tag("Taiwanese_Food.jpg", alt: "Taiwanese Beef Noodle Soup", class: "img-responsive") %>
-    </div>
+<div id="home-image">
+  <%= image_tag("dumplings.jpg", alt: "Steamed Dumplings", class: "img-responsive") %>
+</div>
+<div class="row contact-info">
+  <div class="col-md-3">
+    <%= image_tag("GreatChinaLogo.jpg", alt: "Great China Logo", class: "img-responsive") %>
+  </div>
+  <div class="col-md-3 hours">
+    <h2>Hours</h2>
+    <p>Sunday 11:30am-9pm</p>
+    <p>Monday 4pm-9pm</p>
+    <p>Tuesday-Saturday 11am-9pm</p>
+  </div>
+  <div class="col-md-3 address">
+    <h2>Location</h2>
+    <p>835 S. Main Ave. Ste. BC</p>
+    <p>Fallbrook, CA 92028</p>
+    <p>760-728-8889</p>
+  </div>
+  <div class="col-md-3">
+    <div id="map"></div>
   </div>
 </div>
-<div "container hours">
-  <h2>Hours</h2>
-  <p>Sunday 11:30am-9pm</p>
-  <p>Monday 4pm-9pm</p>
-  <p>Tuesday-Saturday 11am-9pm</p>
-</div>
-<div "container contact-info">
-  <h2>Location</h2>
-  <p>835 S. Main Ave. Ste. BC</p>
-  <p>Fallbrook, CA 92028</p>
-  <p>760-728-8889</p>
-</div>
-<div id="map"></div>
 <script>
   function initMap() {
     var uluru = {lat: 33.375674, lng: -117.252913};
