@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Reservations</h1>
+<h1>Reservations</h1>
 
 <table class="table">
   <thead>
@@ -20,7 +20,7 @@
         <td><%= reservation.first_name %></td>
         <td><%= reservation.last_name %></td>
         <td><%= reservation.phone %></td>
-        <td><%= reservation.arrival.strftime("%F - at %I:%M%p") %></td>
+        <td><%= reservation.arrival.strftime("%F - %T") %></td>
         <td><%= reservation.party_size %></td>
         <td><%= link_to 'Show', reservation %></td>
         <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>

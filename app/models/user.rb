@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :items, through: :menus
+
+  after_initialize { self.role ||= :standard }
+
+  enum role: [:standard, :admin]
 end

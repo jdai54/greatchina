@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
-
+  before_action :authorize_admin_only
   # GET /items
   def index
     @items = Item.all
@@ -54,5 +54,9 @@ class ItemsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def item_params
       params.require(:item).permit(:title, :description, :price, :category)
+    end
+
+    def authorize_admin_only
+      redirect_to(root_path) unless current_user && current_user.admin?
     end
 end

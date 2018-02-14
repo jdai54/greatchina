@@ -24,6 +24,7 @@ end
  gem 'figaro', '1.0'
  gem 'bootstrap-sass'
  gem 'devise'
+ gem 'pundit'
 
  group :development, :test do
    gem 'byebug'
