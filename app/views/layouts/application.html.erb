@@ -3,30 +3,77 @@
 <head>
   <title>Greatchina</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Tangerine:700", media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Tangerine:700|Comfortaa|Supermercado+One", media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <ul class="nav nav-tabs">
-    <li><%= link_to "Great China", welcome_index_path %></li>
-    <li><%= link_to "Menu", menu_path %></li>
-    <li><%= link_to "Order", orders_path %></li>
-    <li><%= link_to "About", welcome_about_path %></li>
-    <li><%= link_to "Contact", welcome_contact_path %></li>
-    <li><%= link_to "Reservations", new_reservation_path %></li>
-
-    <div class="pull-right user-info">
+  <nav>
+    <div class="nav-left">
+    <ul class="nav">
+      <li><%= link_to "Great China", welcome_index_path %></li>
+      <li><%= link_to "Menu", menu_path %></li>
+      <!-- <li><%= link_to "Order", orders_path %></li> -->
+      <li><%= link_to "Reservations", new_reservation_path %></li>
+      <li><%= link_to "About", welcome_about_path %></li>
+      <!-- <li><%= link_to "Contact", welcome_contact_path %></li> -->
+    </ul>
+  </div>
+  <div class="nav-right">
+    <ul class="nav">
       <% if user_signed_in? %>
-       Signed in as: <strong><%= current_user.email %></strong> |
-       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete  %></li>
+        <li><%= link_to "Signed in as: #{current_user.email}", edit_user_registration_path %>
+        </li>
      <% else %>
-       <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %> -
-       <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link'  %>
+       <li><%= link_to "Sign Up", new_user_registration_path %></li>
+       <li><%= link_to "Sign In", new_user_session_path  %></li>
      <% end %>
-    </div>
-  </ul>
+    </ul>
+  </div>
+  </nav>
   <%= yield %>
+  <footer>
+    <div class="row contact-info">
+      <div class="col-md-3">
+        <%= image_tag("InvertedGreatChinaLogo.png", alt: "Great China Logo", class: "img-responsive logo") %>
+      </div>
+      <div class="col-md-3 hours">
+        <p class="welcome-heading">HOURS</p>
+        <p>Sunday:
+          11:30am-9pm</p>
+        <p>Monday:
+          4pm-9pm</p>
+        <p>Tuesday-Saturday:
+          11am-9pm</p>
+      </div>
+      <div class="col-md-3 address">
+        <p class="welcome-heading">LOCATION</p>
+        <p>835 S. Main Ave. Ste. BC</p>
+        <p>Fallbrook, CA 92028</p>
+        <p>760-728-8889</p>
+      </div>
+      <div class="col-md-3" id="map">
+      </div>
+    </div>
+  </footer>
+  <script>
+    function initMap() {
+      var uluru = {lat: 33.375674, lng: -117.252913};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: uluru,
+
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLEMAPS_API_KEY']%>&callback=initMap">
+  </script>
 </body>
 </html>
