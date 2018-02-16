@@ -30,6 +30,7 @@
 
 h1 {
   font-family: 'Tangerine', cursive;
+  text-align: center;
 }
 
 
@@ -47,15 +48,57 @@ body {
   border: none;
   color: #fff;
   width: 100%;
+  font-family: 'Comfortaa', cursive;
 }
 
 .nav a {
   color: white;
   font-size: 18px;
+  -webkit-transition: color 0.8s;
+}
+
+.nav a:hover {
+  color: #337ab7;
+}
+
+.nav-left {
+    float: left;
+}
+
+.nav-left ul li {
+    float: left;
+}
+
+.nav-right ul li {
+    float: right;
+    color: white;
+    font-size: 18px;
 }
 
 .contact-info {
-  background-color: #262626;
+  background-color: black;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 15px auto;
+  font-family: 'Comfortaa', cursive;
+  line-height: 1.5;
+
+}
+
+.logo {
+  margin: auto;
+  max-width: 75%;
+  height: auto;
+}
+
+.welcome-heading {
+  padding-top: 2.0em;
+  font-weight: 800;
+  font-size: 150%;
+  font-family: 'Comfortaa', cursive;
 }
 
 .hours {
@@ -63,8 +106,7 @@ body {
 
 #map {
   height: 300px;
-  width: 100%;
-  position: absolute;
+  max-width: 100%;
 }
 
 #about-image {
@@ -83,8 +125,8 @@ body {
 .menu-category-big {
   text-align: center;
   font-family: 'Tangerine', cursive;
-  font-weight: bold;
-  font-size: 2.0em;
+  font-weight: 800;
+  font-size: 2.1em;
 }
 
 .item-entry {
@@ -94,6 +136,15 @@ body {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-// .item-price {
-//   text-align: right;
-// }
+.field {
+  font-family: 'Comfortaa', cursive;
+}
+
+.field input {
+  color: black;
+}
+
+.btn {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2em;
+}
