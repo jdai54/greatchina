@@ -14,8 +14,6 @@ class MenusController < ApplicationController
     @chop_suey = Item.where(category: "Chop Suey")
     @chow_mein = Item.where(category: "Chow Mein")
     @rice_bowls = Item.where(category: "Rice Bowls")
-
-
-
+    @specialties = Item.where(category: "Specialties")
   end
 end
