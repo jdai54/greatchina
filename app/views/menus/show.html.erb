@@ -1,18 +1,52 @@
 <div class="container menu-display">
-  <h1>Lunch Menu</h1>
+  <h1 class="display-menu">~ Appetizers ~
+    <!-- <span class="bottom"></span> -->
+  </h1>
+    <div id="menu" style="display: none">
+      <%= render 'appetizers' %>
+    </div>
+  <h1 class="display-menu">~ Lunch Menu ~
+    <!-- <span class="bottom"></span> -->
+  </h1>
+    <div id="menu" style="display: none">
 
-  <h1>Dinner Menu</h1>
-  <%= render 'appetizers' %>
-  <%= render 'soups' %>
-  <%= render 'seafood' %>
-  <%= render 'lamb' %>
-  <%= render 'beef' %>
-  <%= render 'poultry' %>
-  <%= render 'vegetables' %>
-  <%= render 'soft_noodles' %>
-  <%= render 'fried_rice' %>
-  <%= render 'egg_foo_young' %>
-  <%= render 'chop_suey' %>
-  <%= render 'chow_mein' %>
-  <%= render 'rice_bowls' %>
+    </div>
+  <h1 class="display-menu">~ House Specialties ~
+    <!-- <span class="bottom"></span> -->
+  </h1>
+    <div id="menu" style="display: none">
+      <%= render 'house_specialties' %>
+    </div>
+  <h1 class="display-menu">~ Gourmet Dinners ~
+    <!-- <span class="bottom"></span> -->
+  </h1>
+  <div id="menu" style="display: none">
+    <%= render 'gourmet' %>
+  </div>
+<h1 class="display-menu">~ à la carte ~
+  <!-- <span class="bottom"></span> -->
+</h1>
+  <div id="menu" style="display: none">
+    <%= render 'seafood' %>
+    <%= render 'lamb' %>
+    <%= render 'beef' %>
+    <%= render 'poultry' %>
+    <%= render 'vegetables' %>
+    <%= render 'soft_noodles' %>
+    <%= render 'fried_rice' %>
+    <%= render 'egg_foo_young' %>
+    <%= render 'chop_suey' %>
+    <%= render 'chow_mein' %>
+    <%= render 'rice_bowls' %>
+  </div>
 </div>
+
+<script>
+$( ".display-menu" ).click(function() {
+  // $( "#menu" ).toggle();
+  $(this).next().toggle();
+  $('html,body').animate({
+      scrollTop: $(this).next().offset().top - 70},
+      'slow');
+});
+</script>

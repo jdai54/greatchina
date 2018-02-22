@@ -81,7 +81,7 @@ body {
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.0em;
   margin: 15px auto;
   font-family: 'Comfortaa', cursive;
   line-height: 1.5;
@@ -136,6 +136,47 @@ p {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
+.gourmet-heading {
+  padding-bottom: 1.0em;
+}
+
+.gourmet-title {
+  font-size: 1.1em;
+  font-family: 'Comfortaa', cursive;
+}
+
+.gourmet-desc {
+  font-size: 1.1em;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.gourmet-entrees {
+  text-align: left;
+}
+
+.gourmet-entrees li {
+  font-size: 1.3em;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.specialties-display {
+  padding-left: 18em;
+  padding-right: 18em;
+}
+
+.specialties-title {
+  font-size: 1.1em;
+  font-family: 'Comfortaa', cursive;
+  font-weight: 800;
+}
+
+.specialties-desc {
+  text-align: center;
+  font-size: 1.0em;
+  font-family: 'PT Sans Narrow', sans-serif;
+  padding-bottom: 1.2em;
+}
+
 .field {
   font-family: 'Comfortaa', cursive;
 }
@@ -147,4 +188,36 @@ p {
 .btn {
   font-family: 'Comfortaa', cursive;
   font-size: 1.2em;
+}
+
+.display-menu {
+  cursor: pointer;
+  padding: 6px 0px;
+}
+
+.display-menu:hover {
+  color: #337ab7;
+}
+// .bottom {
+//   display: inline-block;
+//   width: 1.5em;
+//   height: 1.5em;
+//   border: 0.15em solid #333;
+//   border-radius: 50%;
+//   margin-left: 0.75em;
+// }
+
+.bottom {
+  content: '';
+	display: inline-block;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: 2em;
+  width: 0.5em;
+  height: 0.5em;
+  border-top: 0.1em solid #333;
+  border-right: 0.1em solid #333;
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
