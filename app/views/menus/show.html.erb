@@ -2,31 +2,31 @@
   <h1 class="display-menu">~ Appetizers ~
     <!-- <span class="bottom"></span> -->
   </h1>
-    <div id="menu" style="display: none">
+    <div id="menu">
       <%= render 'appetizers' %>
     </div>
   <h1 class="display-menu">~ Lunch Menu ~
     <!-- <span class="bottom"></span> -->
   </h1>
-    <div id="menu" style="display: none">
-
+    <div id="menu">
+      <%= render 'lunch' %>
     </div>
   <h1 class="display-menu">~ House Specialties ~
     <!-- <span class="bottom"></span> -->
   </h1>
-    <div id="menu" style="display: none">
+    <div id="menu">
       <%= render 'house_specialties' %>
     </div>
   <h1 class="display-menu">~ Gourmet Dinners ~
     <!-- <span class="bottom"></span> -->
   </h1>
-  <div id="menu" style="display: none">
+  <div id="menu">
     <%= render 'gourmet' %>
   </div>
 <h1 class="display-menu">~ à la carte ~
   <!-- <span class="bottom"></span> -->
 </h1>
-  <div id="menu" style="display: none">
+  <div id="menu">
     <%= render 'seafood' %>
     <%= render 'lamb' %>
     <%= render 'beef' %>
@@ -43,7 +43,6 @@
 
 <script>
 $( ".display-menu" ).click(function() {
-  // $( "#menu" ).toggle();
   $(this).next().toggle();
   $('html,body').animate({
       scrollTop: $(this).next().offset().top - 70},
