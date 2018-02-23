@@ -55,7 +55,7 @@ class ItemsController < ApplicationController
     def item_params
       params.require(:item).permit(:title, :description, :price, :category)
     end
-
+    # only allow users to access item edit if current user and admin.
     def authorize_admin_only
       redirect_to(root_path) unless current_user && current_user.admin?
     end
