@@ -4,6 +4,7 @@ class MenusController < ApplicationController
     @appetizers = Item.where(category: "Appetizers")
     @soups = Item.where(category: "Soups")
     @seafood = Item.where(category: "Seafood")
+    @pork = Item.where(category: "Pork")
     @lamb = Item.where(category: "Lamb")
     @beef = Item.where(category: "Beef")
     @poultry = Item.where(category: "Poultry")
