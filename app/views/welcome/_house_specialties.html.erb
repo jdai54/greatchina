@@ -1,0 +1,11 @@
+<div class="specialties-display main">
+<p>add 3.75 for complete dinner with fried shrimp, egg roll, and egg flower soup</p><br>
+  <% @specialties.each do |item| %>
+      <div class="specialties-title">
+        <%= item.title.upcase %> &nbsp <%= price_correction(item) %>
+      </div>
+      <div class="specialties-desc">
+        <%= item.description %>
+      </div>
+  <% end %>
+</div>

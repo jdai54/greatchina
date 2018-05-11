@@ -1,0 +1,15 @@
+<div class="lunch-display">
+  <p>served with egg roll, fried wonton, and fried rice (served until 3pm)</p><br>
+  <div class="row">
+    <% @lunch.each do |item| %>
+        <div class="col-md-4 item-entry">
+          <div class="item-title">
+            <%= item.title %>
+          </div>
+          <div class="pull-right">
+            <%= price_correction(item) %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

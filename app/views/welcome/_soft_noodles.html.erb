@@ -1,0 +1,13 @@
+<h3 class="menu-category-big">Soft Noodles (Lo Mein)</h3>
+<div class="row">
+  <% @soft_noodles.each do |item| %>
+      <div class="col-md-4 item-entry">
+        <div class="item-title">
+          <%= item.title %>
+        </div>
+        <div class="pull-right">
+          <%= price_correction(item) %>
+        </div>
+      </div>
+  <% end %>
+</div>

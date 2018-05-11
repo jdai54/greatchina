@@ -29,20 +29,21 @@
 }
 
 h1 {
-  font-family: 'Tangerine', cursive;
+  font-family: 'Amatic SC', cursive;
   text-align: center;
 }
 
 
 body {
-  background-image: image-url('dragon.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: image-url('dragon.jpeg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
   color: #fff;
+  background-color: #272626;
 }
 
 .nav {
-  padding-top: 10px;
+  // padding-top: 10px;
   padding-right: 40px;
   background-color: #780001;
   border: none;
@@ -51,10 +52,16 @@ body {
   font-family: 'Comfortaa', cursive;
 }
 
+.nav li a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .nav a {
   color: white;
   font-size: 18px;
   -webkit-transition: color 0.8s;
+  line-height: 72px;
 }
 
 .nav a:hover {
@@ -81,11 +88,16 @@ body {
 }
 
 p {
-  font-size: 1.0em;
+  font-size: 1.5em;
   margin: 15px auto;
   font-family: 'Comfortaa', cursive;
   line-height: 1.5;
   font-weight: 800;
+}
+
+.navbar-logo {
+  max-height: 72px;
+  max-width: 250px;
 }
 
 .logo {
@@ -94,10 +106,31 @@ p {
   height: auto;
 }
 
+#home-image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.home-image {
+  opacity: 0.6;
+  max-width: 70%;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.0em;
+  color: white;
+  font-family: 'Yatra One', cursive;
+}
+
 .welcome-heading {
   padding-top: 2.0em;
   font-weight: 800;
-  font-size: 150%;
+  font-size: 175%;
   font-family: 'Comfortaa', cursive;
 }
 
@@ -134,9 +167,8 @@ p {
 
 .menu-category-big {
   text-align: center;
-  font-family: 'Tangerine', cursive;
-  font-weight: 800;
-  font-size: 2.1em;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.9em;
 }
 
 .item-entry {

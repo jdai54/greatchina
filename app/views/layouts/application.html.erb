@@ -4,7 +4,7 @@
   <title>Greatchina</title>
   <%= favicon_link_tag asset_path('flag_sun.png'), :rel => 'icon', :type =>  'image/png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Tangerine:700|Comfortaa|Supermercado+One", media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', "https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Tangerine:700|Amatic+SC:700|Yatra+One|Comfortaa|Supermercado+One", media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -13,11 +13,12 @@
   <nav>
     <div class="nav-left">
     <ul class="nav">
+      <li><%= image_tag("sun_logo.png", alt: "Sun Logo", class: "img-responsive navbar-logo") %></li>
       <li><%= link_to "Great China", root_path %></li>
       <li><%= link_to "Menu", menu_path %></li>
       <!-- <li><%= link_to "Order", orders_path %></li> -->
       <!-- <li><%= link_to "Reservations", new_reservation_path %></li> -->
-      <li><%= link_to "About", welcome_about_path %></li>
+      <li><%= link_to "Our Story", welcome_about_path %></li>
       <!-- <li><%= link_to "Contact", welcome_contact_path %></li> -->
     </ul>
   </div>
@@ -28,8 +29,8 @@
         <li><%= link_to "Signed in as: #{current_user.email}", edit_user_registration_path %>
         </li>
      <% else %>
-       <li><%= link_to "Sign Up", new_user_registration_path %></li>
-       <li><%= link_to "Sign In", new_user_session_path  %></li>
+       <li><%= link_to "Email Updates", new_user_registration_path %></li>
+       <!-- <li><%= link_to "Sign In", new_user_session_path  %></li> -->
      <% end %>
     </ul>
   </div>
