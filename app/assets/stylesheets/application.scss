@@ -88,7 +88,7 @@ body {
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin: 15px auto;
   font-family: 'Comfortaa', cursive;
   line-height: 1.5;
@@ -219,16 +219,29 @@ p {
 }
 
 .specialties-title {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-family: 'Comfortaa', cursive;
   font-weight: 800;
 }
 
 .specialties-desc {
   text-align: center;
-  font-size: 1.0em;
+  font-size: 1.1em;
   font-family: 'PT Sans Narrow', sans-serif;
   padding-bottom: 1.2em;
+}
+
+#spicy-fried {
+  font-size: 1.5em;
+  margin: 15px auto;
+  font-family: 'Amatic SC', cursive;
+  line-height: 1.5;
+  font-weight: 800;
+}
+
+#our-story-body {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2em;
 }
 
 .field {
@@ -248,7 +261,7 @@ p {
   font-size: 1.2em;
 }
 
-.display-menu {
+.menu {
   cursor: pointer;
   padding: 6px 0px;
 }
