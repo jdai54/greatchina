@@ -261,13 +261,14 @@ p {
   font-size: 1.2em;
 }
 
-.menu {
+#menu {
   cursor: pointer;
   padding: 6px 0px;
 }
 
 .display-menu:hover {
   color: #337ab7;
+  cursor: pointer;
 }
 // .bottom {
 //   display: inline-block;
@@ -291,4 +292,15 @@ p {
   -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
+}
+
+#covid {
+  color: black;
+  padding-left: 1.0em;
+  padding-right: 1.0em;
+}
+
+#bold {
+  font-weight: bold;
+  font-size: 1.8em;
 }
